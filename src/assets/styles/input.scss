@@ -1,0 +1,44 @@
+@import "./colors.scss";
+.input::-moz-placeholder
+{
+	color: $color-grey;
+	opacity: 1;
+}
+
+.input:-ms-input-placeholder,
+{	
+	color: $color-grey;
+}
+
+.input::-webkit-input-placeholder
+ {
+	color: $color-grey;
+}
+
+.input{
+	border: 2px solid $color-grey;
+	color: $color-blue-grey;
+	font-size: 15px;
+	line-height: 1.467;
+	padding: 20px;
+	height: 30px;
+	border-radius: 6px;
+	box-shadow: none;
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+.input:focus
+{
+	border-color: $color-green;
+	outline: 0;
+	box-shadow: none;
+}
+
+.input.input-block{
+	width:100%;
+} 
+
+select.input{
+	min-height: 50px;
+	padding:10px
+}

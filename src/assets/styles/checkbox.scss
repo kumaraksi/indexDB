@@ -1,0 +1,35 @@
+@import "./colors.scss";
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label:before {
+    font-family: "Ionicons";
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+input[type=checkbox]+label:before {
+    content: "\f2f7";
+    transition: all 500ms ease-in;
+}
+
+/* unchecked icon */
+input[type=checkbox]+label:before {
+    letter-spacing: 10px;
+}
+
+input[type=checkbox]:checked+label:before {
+    content: "\f2f7";
+    color: $color-green;
+    transform: rotate(0deg);
+    transition: all 500ms ease-in;
+}
+
+input[type=checkbox]:checked+label:before {
+    letter-spacing: 5px;
+}
+.checkbox label {
+    font-size: 2rem;
+}

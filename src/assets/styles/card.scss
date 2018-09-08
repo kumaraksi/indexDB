@@ -1,0 +1,69 @@
+@import "./colors.scss";
+
+.card {
+    box-shadow: 1px 1px 2px 1px rgba(158, 158, 158, 0.5);
+    margin: 1rem 0px;
+    background: #fff;
+    height: 280px;
+    position: relative;
+}
+.card 
+
+.card-header {
+    padding: 5px 10px;
+    .card-title {
+        text-align: left;
+        color:$color-primary;
+    }
+    .card-subtitle {
+        color: $color-grey;
+        font-size: 12px;
+        font-style: italic;
+    }
+}
+.card-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    border-top:1px solid $color-lime;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    .imdb-link{
+        color:$color-amber;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .year{
+        color:$color-blue-grey;
+    }    
+    }
+  
+.card-desc {
+    ul {
+    list-style: none;
+        li{
+            padding: 0.6rem 0.55rem 0;
+            font-size: 11px;
+            color:$color-blue-grey;
+            strong{
+                color:$color-black;
+            }
+        }
+    }
+}
+
+ul.genre-list li {
+    display: inline;
+    padding: 0em 0.2em;
+    border-left: 1px solid $color-grey;
+    &:first-child{
+        border-left: 0;
+    }
+}
+
+ul.genre-list {
+    max-width: 85%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}

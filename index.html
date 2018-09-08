@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="fav.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="fav.ico" type="image/x-icon"/>
+  <title>Movie Encyclopedia</title>
+</head>
+
+<body>
+  <header>
+    <nav class='nav-bar'>
+      <h1 class="color-white">Movie Encyclopedia</h1>
+    </nav>
+  </header>
+  <div class="container">
+      <div class="filter-bar wrapper">
+          <div class="row">
+            <div class="col-4 pull-right">
+              <div class="inline-form-control">
+                <div class="radio">
+                  <input type="radio" name="sort" value="movie_title" id="title">
+                  <label for="title"> Title </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="sort" value="title_year" id="year">
+                  <label for="year"> Year </label>
+                </div>
+              </div>
+              <div class="inline-form-control">
+                <div class="checkbox">
+                  <input type="checkbox" name="order" label="AESC" id="sortOrder">
+                  <label for="sortOrder"></label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pull-right">
+                <input type="text" name="name" placeholder="Movie name" id="search" class="input input-block">
+              </div>  
+          </div>
+        </div>    
+  </div>
+  <section id="app">
+  </section>
+  <button class="btn btn-block color-light-blue load-button" id="loadButton">Load More</button>
+  <div class="loader" id="loader">
+    <span class="icon ion-md-cloud-download"></span>
+  </div>
+</body>
+
+</html>

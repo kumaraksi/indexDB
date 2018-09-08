@@ -1,0 +1,64 @@
+@import './colors.scss';
+.btn {
+  -webkit-appearance: none;
+  border: 0px;
+  padding: 15px 20px;
+  font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+$colors : ( 
+    color-primary: $color-primary,
+    color-green: $color-green, 
+    color-teal: $color-teal, 
+    color-pink: $color-pink, 
+    color-purple: $color-purple, 
+    color-indigo: $color-indigo, 
+    color-blue: $color-blue, 
+    color-light-blue: $color-light-blue, 
+    color-cyan: $color-cyan, 
+    color-lime: $color-lime, 
+    color-light-green: $color-light-green, 
+    color-yellow: $color-yellow, 
+    color-amber: $color-amber, 
+    color-orange: $color-orange, 
+    color-deep-orange: $color-deep-orange, 
+    color-brown: $color-brown, 
+    color-grey: $color-grey, 
+    color-blue-grey: $color-blue-grey);
+
+@each $i, $color in $colors {
+  .#{$i} {
+    box-shadow: 0px 0px 0px 1px $color inset;
+    color: $color;
+    &:hover {
+      background: $color;
+      color: $color-white;
+      transition: all 200ms ease-in;
+    }
+    &.btn-fill {
+      background: $color;
+      color: $color-white;
+    }
+  }
+}
+
+.btn-danger {
+  box-shadow: 0px 0px 0px 1px $color-danger inset;
+  color: $color-danger;
+}
+
+// Size
+.btn-small {
+  padding: 4px 10px;
+  text-align: center;
+  font-size: 10px;
+}
