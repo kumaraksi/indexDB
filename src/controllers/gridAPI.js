@@ -1,5 +1,5 @@
 import db from '../storage/db'
-import {showLoader,hideLoader} from '../Utils'
+import {hideLoader} from '../Utils'
 class gridAPI{
     constructor(){
         this._offset = 0;
@@ -26,14 +26,14 @@ class gridAPI{
         return this._sortProp
     }
     set sortProp(val){
-        if(this._sortProp != val){
+        if(this._sortProp !== val){
             this._sortProp = val
             this.resetPagination()
             this.reloadGrid()    
         }
     }
     set reverseSort(val){
-        if(this._reverseSort != val){
+        if(this._reverseSort !== val){
             this._reverseSort = val;
             this.reloadGrid()
             }
@@ -78,7 +78,7 @@ class gridAPI{
         if(cleandAndAdd){
             document.getElementById('app').innerHTML = ''
         }
-        document.getElementById('app').innerHTML += parent;  
+        document.getElementById('app').appendChild(parent);  
         hideLoader();          
     }
 
